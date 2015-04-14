@@ -58,9 +58,9 @@ app.get("/:shorturl", function(req, res) {
 		if(err) 
 			return handleError(err);
 
-		if(url.lURL.trim().substring(0,6) != "http://")
-			res.redirect("http://"+url.lURL);
-		else
+		//if(url.lURL.trim().substring(0,6) != "http://")
+		//	res.redirect("http://"+url.lURL);
+		//else
 			res.redirect(url.lURL);
 	});
 
