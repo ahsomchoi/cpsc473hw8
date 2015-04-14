@@ -5,8 +5,7 @@ var main = function () {
 			var tempElement = $("<li>").html("Long URL: "+response[i].lURL+"<br>short URL: http://localhost:3000/"+response[i].sURL+"<br>View count:"+response[i].count);
 			$("#topten").append(tempElement);			
 		}
-		//console.log(response[0]);
-	})
+	});
 
 	$("#submit").on("click", function (event) {
 		
