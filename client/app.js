@@ -1,5 +1,13 @@
 var main = function () {
-	
+	$.get("/gettopten", function(response) {
+		var i;
+		for(i=0; i<10; i++){
+			var tempElement = $("<li>").html("Long URL: "+response[i].lURL+"<br>short URL: http://localhost:3000/"+response[i].sURL+"<br>View count:"+response[i].count);
+			$("#topten").append(tempElement);			
+		}
+		//console.log(response[0]);
+	})
+
 	$("#submit").on("click", function (event) {
 		
 		var url = $("#url").val();
@@ -39,6 +47,7 @@ var main = function () {
 			$("#url").val("");
 		}
 	});
+
 
 };
 
